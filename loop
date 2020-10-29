@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <cs50.h>
+#include <math.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
+
+
+int main(int argc, string argv[])
+{
+
+    if (argc != 2 ) // Checks for two arguments 
+      {
+        printf("Usage: ./caesar key");
+        return 1;
+      }
+
+
+    int i;
+    int n; 
+     
+     for (i= 0, n = strlen(argv[1]); i < n; i++) // Loop through the length of the argv[1] BUT IT DOESNT WORK 
+        {
+            if (isalpha(argv[1][i]))
+                {
+                    printf("Usage: ./caesar key");
+                    return 1; 
+                }
+        
+            else 
+                {
+                    int key = atoi(argv[1]);
+                    printf("Success\n%i\n", key); // Even if I input 2x, Success is printed. But it should fail! All chars must be digits
+                    return 0;  
+                }
+        }
+
+  
+}
